@@ -4,7 +4,7 @@ import math
 
 class Solution(object):
     def minkovski_dist(self, pair, norm=2):
-        return math.sqrt(sum((pair[0][i] - pair[1][i]) ** norm for i in range(len(pair[0]))))
+        return sum((pair[0][i] - pair[1][i]) ** norm for i in range(len(pair[0]))) ** (1.0/norm)
     
     def kClosest(self, points, k):
         """
@@ -24,7 +24,7 @@ from heapq import heapify, heappop
 
 class Solution(object):
     def minkovski_dist(self, pair, norm=2):
-        return math.sqrt(sum((pair[0][i] - pair[1][i]) ** norm for i in range(len(pair[0]))))
+        return sum((pair[0][i] - pair[1][i]) ** norm for i in range(len(pair[0]))) ** (1.0/norm)
     
     def kClosest(self, points, k):
         """
